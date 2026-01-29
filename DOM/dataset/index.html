@@ -1,0 +1,19 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+ </head>
+ <body>
+  <div id="mydiv" data-name="domenic" data-start-coding-at="15">
+    Sample text
+  </div>
+  <script>
+    const mydiv=document.getElementById('mydiv');
+    mydiv.dataset.name='bob';
+    mydiv.dataset.startCodingAt=34;
+    console.log(mydiv.dataset);
+  </script>
+ </body>
+ </html>
