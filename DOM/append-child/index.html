@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <ul id="mylist"></ul>
+  <script>
+    const ullist=document.getElementById('mylist');
+    const fruitlist=["Apple","Mango","Graps","Banana","Tomato"];
+    for(let i=0;i<fruitlist.length;i++){
+      let data=document.createElement('li');
+      data.textContent=fruitlist[i];
+      ullist.appendChild(data);
+    }
+  </script>
+</body>
+</html>
