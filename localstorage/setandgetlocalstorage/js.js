@@ -1,13 +1,10 @@
-
-const datas={
-  name:"Sahil",
+let obj1={
+  name:"Mohit Sankhyan",
   age:45,
-  value:true
+  education:true
 };
 
- localStorage.setItem("data",JSON.stringify(datas));
+localStorage.setItem(("data"),JSON.stringify(obj1));
 
-const data=JSON.parse(localStorage.getItem("data"))||[];
-
-
-console.log(data);
+const datais=JSON.parse(localStorage.getItem("data"));
+console.log(datais)
