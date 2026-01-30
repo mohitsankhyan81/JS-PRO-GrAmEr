@@ -1,8 +1,4 @@
-let obj1={
-  name:"Mohit Sankhyan",
-  age:45,
-  education:true
-};
+let obj1=["Mohit","Robin","Ankit"]
 
 localStorage.setItem(("data"),JSON.stringify(obj1));
 
