@@ -15,4 +15,7 @@ const p1=fetch("https://api.github.com/users")
   div.appendChild(image);
   }
 })
+.catch((error)=>{
+  div.textContent=error.message;
+})
 
