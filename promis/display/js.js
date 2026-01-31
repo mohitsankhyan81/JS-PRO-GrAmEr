@@ -5,6 +5,8 @@ fetch("https://jsonplaceholder.typicode.com/posts")
 .then((res)=>{
   for(let i=0;i<res.length;i++){
   const div=document.createElement('div')
+  div.style.backgroundColor="red";
+  const br=document.createElement('br');
   const div1=document.createElement('div');
   const div2=document.createElement('div');
   const div3=document.createElement('div');
@@ -19,9 +21,8 @@ fetch("https://jsonplaceholder.typicode.com/posts")
   div.appendChild(div2);
   div.appendChild(div3);
   div.appendChild(div4);
-
   document.body.appendChild(div)
-
+  document.body.appendChild(br);
   }
   console.log(res)
 })
