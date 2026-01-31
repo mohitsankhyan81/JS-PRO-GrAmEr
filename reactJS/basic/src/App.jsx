@@ -39,7 +39,7 @@ const App = () => {
       <label>Branch: </label>
       <input type="text" placeholder='Branch' ref={branchRef} />
       <br></br>
-      <label>Phone No</label>
+      <label>Phone No: </label>
       <input type="text" placeholder='Phone No' ref={phonenoRef} />
       <br></br>
       <label>Email: </label>
