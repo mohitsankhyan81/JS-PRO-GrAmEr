@@ -31,3 +31,45 @@
 //     clearInterval(id);
 //   }
 // },1000)
+
+// let arr=[45,67,89,90,55];
+
+// arr.forEach((e,i,arr)=>{
+//   e+=5;
+//   console.log(e);
+// });
+
+// const data=arr.filter((e,i,arr)=>{
+//   if(e>60){
+//     return e;
+//   }
+// })
+
+// console.log(data);
+
+
+let arr=[200,450,120,800];
+
+const data=arr.map((e,i,arr)=>{
+  e=e+e*0.18;
+  console.log(e);
+  return e;
+})
+
+
+let total_bill=0;
+data.forEach((e,i,arr)=>{
+  total_bill+=e;
+})
+
+console.log(total_bill);
+
+
+
+// data.forEach((e,i,arr)=>{
+//   total_bill+=e;
+// });
+
+// console.log(total_bill)
+
+
