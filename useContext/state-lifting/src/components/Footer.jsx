@@ -1,4 +1,3 @@
-import Display from "./Display.jsx"
 
 const Footer=()=>{
     return (

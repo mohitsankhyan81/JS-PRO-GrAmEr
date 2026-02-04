@@ -1,10 +1,10 @@
-import Display from "./Display.jsx"
-
-const Header=({count})=>{
+import Cart from "./Cart.jsx"
+const Header=()=>{
     return (
         <>
         <h1>I am blinkit</h1>
-        <Display count={count}/>
+        {/* <Display/> */}
+        <Cart/>
         </>
     )
 }
