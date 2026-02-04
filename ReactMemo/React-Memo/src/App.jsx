@@ -5,7 +5,7 @@ import { useCallback } from "react";
 import Post from './Post.jsx';
 const App=()=>{
   const [count,setcount]= useState(0);
-  const [number,setnumber]=useState(100000);
+  const [number,setnumber]=useState(100);
 
 
   const prime=useMemo(()=>{
