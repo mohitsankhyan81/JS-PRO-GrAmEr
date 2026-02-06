@@ -7,7 +7,7 @@ const DashBoard=()=>{
         <h1>All the Sports Activity</h1>
         {tasks.map((e,i)=>(
             <li key={i}>
-                {e}
+                {e.title}
             </li>
         ))}
         </>

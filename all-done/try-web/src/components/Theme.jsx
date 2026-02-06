@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useState } from "react"
+import { useState } from "react";
 
 const Theme=()=>{
     const [dark,setdark]=useState(false);

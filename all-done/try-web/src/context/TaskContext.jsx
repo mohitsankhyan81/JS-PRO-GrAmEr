@@ -9,10 +9,10 @@ const TaskProvider=({children})=>{
     const [tasks,settask]=useState([]);
 
     useEffect(()=>{
-        const stored=JSON.parse(localStorage.getItem("tasks"))||{}
+        const stored=JSON.parse(localStorage.getItem("tasks"))||[]
         settask(stored)
     },[])
-
+    
     const addTask = (task) => {
     const updated = [...tasks, task]
     settask(updated)
