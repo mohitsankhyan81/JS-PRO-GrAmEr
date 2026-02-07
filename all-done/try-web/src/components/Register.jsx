@@ -53,7 +53,7 @@ const Register=()=>{
                 {
                     required:"Please enter password",
                     validate:(value)=>
-                        value===password||"Password not exist"
+                        value===password||"Password not match"
                 }
             )}/>
             {errors.repassword&& <span>{errors.repassword.message}</span>}
