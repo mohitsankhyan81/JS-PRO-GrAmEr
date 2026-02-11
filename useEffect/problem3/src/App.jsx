@@ -1,33 +1,57 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react"
+import { useEffect } from "react"
 
-function App() {
-  const [count, setCount] = useState(0)
+const App=()=>{
+  const [data,setdata]=useState([]);
+  const [task,settask]=useState([]);
+  const [input,setintput]=useState("");
+  useEffect(()=>{
+    fetch("https://fakestoreapi.com/products")
+    .then((res)=>{
+      return res.json();
+    })
+    .then((resdata)=>{
+      console.log(resdata);
+      setdata(resdata);
+    })
+  },[]) 
 
+  const handleSubmit=(e)=>{
+    e.preventDefault();
+
+    const result=data.filter((user)=>{
+      return user.title.toLowerCase().includes(input.toLowerCase());
+    })
+
+    setdata(result);
+  }
+
+  const handledelete=(id)=>{
+    const datas=data.filter((user)=>user.id!==id)
+    setdata(datas)
+  }
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <h1>Task is like</h1>
+
+      <form onSubmit={handleSubmit}>
+        <input type="text" placeholder="Enter input" value={input} onChange={(e)=>setintput(e.target.value)} />
+        <button type="submit">add</button>
+      </form>
+      <ul>
+        {data.map((e)=>(
+          <li key={e.id}>
+            Title: {e.title}
+            <br/>
+            Price: {e.price}
+            <br/>
+            Category:{e.category}
+            <br/>
+            <button onClick={()=>handledelete(e.id)}>delete</button>
+            <span><br /></span>
+          </li>
+        ))}
+      </ul>
     </>
   )
 }
