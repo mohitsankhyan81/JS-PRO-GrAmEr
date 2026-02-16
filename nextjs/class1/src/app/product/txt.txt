@@ -1,0 +1,7 @@
+if you want to perform routing in the next js 
+1. just make folder in app folder
+
+2.or apne folder ka name vahi rakhna joo route rakhna chate ho
+
+3.make the page.js file in that folder
+
