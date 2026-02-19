@@ -1,0 +1,134 @@
+{
+  "girls": [
+    {
+      "id": 1,
+      "name": "Floral Summer Dress",
+      "price": 1499,
+      "working": true,
+      "size": "S",
+      "photo": "https://images.unsplash.com/photo-1496747611176-843222e1e57c"
+    },
+    {
+      "id": 2,
+      "name": "Denim Midi Dress",
+      "price": 1899,
+      "working": true,
+      "size": "M",
+      "photo": "https://images.unsplash.com/photo-1520975916090-3105956dac38"
+    },
+    {
+      "id": 3,
+      "name": "Party Wear Gown",
+      "price": 3499,
+      "working": true,
+      "size": "L",
+      "photo": "https://images.unsplash.com/photo-1509631179647-0177331693ae"
+    },
+    {
+      "id": 4,
+      "name": "Cotton Kurti",
+      "price": 999,
+      "working": true,
+      "size": "S",
+      "photo": "https://images.unsplash.com/photo-1585487000160-6ebcfceb0d03"
+    },
+    {
+      "id": 5,
+      "name": "Stylish Crop Top",
+      "price": 799,
+      "working": true,
+      "size": "M",
+      "photo": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f"
+    },
+    {
+      "id": 6,
+      "name": "Maxi Dress",
+      "price": 2199,
+      "working": true,
+      "size": "L",
+      "photo": "https://images.unsplash.com/photo-1524253482453-3fed8d2fe12b"
+    },
+    {
+      "id": 7,
+      "name": "Ethnic Anarkali",
+      "price": 2799,
+      "working": true,
+      "size": "XL",
+      "photo": "https://images.unsplash.com/photo-1618354691373-d851c5c3a990"
+    },
+    {
+      "id": 8,
+      "name": "Casual Skirt Set",
+      "price": 1399,
+      "working": true,
+      "size": "S",
+      "photo": "https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc"
+    }
+  ],
+  "boys": [
+    {
+      "id": 1,
+      "name": "Formal Shirt",
+      "price": 1299,
+      "working": true,
+      "size": "M",
+      "photo": "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf"
+    },
+    {
+      "id": 2,
+      "name": "Slim Fit Jeans",
+      "price": 2199,
+      "working": true,
+      "size": "L",
+      "photo": "https://images.unsplash.com/photo-1542272604-787c3835535d"
+    },
+    {
+      "id": 3,
+      "name": "Casual T-Shirt",
+      "price": 799,
+      "working": true,
+      "size": "S",
+      "photo": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab"
+    },
+    {
+      "id": 4,
+      "name": "Hoodie Sweatshirt",
+      "price": 1999,
+      "working": true,
+      "size": "XL",
+      "photo": "https://images.unsplash.com/photo-1556821840-3a63f95609a7"
+    },
+    {
+      "id": 5,
+      "name": "Classic Blazer",
+      "price": 3999,
+      "working": true,
+      "size": "L",
+      "photo": "https://images.unsplash.com/photo-1593030761757-71fae45fa0e7"
+    },
+    {
+      "id": 6,
+      "name": "Cotton Kurta",
+      "price": 1499,
+      "working": true,
+      "size": "M",
+      "photo": "https://images.unsplash.com/photo-1618354691438-25bc04584c23"
+    },
+    {
+      "id": 7,
+      "name": "Track Pants",
+      "price": 999,
+      "working": true,
+      "size": "S",
+      "photo": "https://images.unsplash.com/photo-1599058917765-a780eda07a3e"
+    },
+    {
+      "id": 8,
+      "name": "Winter Jacket",
+      "price": 4599,
+      "working": true,
+      "size": "XL",
+      "photo": "https://images.unsplash.com/photo-1544441893-675973e31985"
+    }
+  ]
+}
