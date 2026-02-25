@@ -1,10 +1,10 @@
 // *anonamus function*
 
-// const data=function(){
-//     console.log("Hello world");
+// const data=function(name){
+//     console.log("Hello world "+ name);
 // }
 
-// data();
+// data("mohit");
 
 // const data=function(){
 //     return "my name is mohit sankhyan";
