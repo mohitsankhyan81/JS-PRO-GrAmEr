@@ -1,0 +1,23 @@
+cd typescript
+// for inside the folder
+
+npm init
+// to initalize the package
+
+npm i -D typescript
+//initalize typescript
+
+npx tsc --init
+//typescript compiler
+
+//make two folder 
+//src
+//dist
+
+//create file in the src
+//for compile use 
+npx tsc
+
+//to run 
+node dist/index.js
+npm start
