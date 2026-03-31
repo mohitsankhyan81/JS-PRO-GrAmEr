@@ -3,9 +3,15 @@ import multer from "multer";
 import path from "path"
 const app=express();
 
-const upload=multer({
-    dest:"uploads/",
-})
+// const upload=multer({
+//     dest:"uploads/",
+// })
+
+// multer.diskStorage=file upload to handdisk
+// multer.memoryStorage=file upload to ram
+// Storage where name
+// filefilter which type 
+// limit file size
 
 app.use(express.static(path.resolve('public')))
 
