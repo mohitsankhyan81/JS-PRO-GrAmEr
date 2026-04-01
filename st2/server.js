@@ -3,8 +3,8 @@ const express=require("express");
 const app=express();
 app.use(express.json());
 const stud=[
-    {id:45,name:"kjdf"},
-    {id:34,name:"dfdf"}
+    {id:1,name:"krish"},
+    {id:2,name:"mohit"}
 ];
 
 app.get("/home/:id",(req,res)=>{
@@ -50,6 +50,18 @@ app.post("/test",middleware,(req,res)=>{
     data.push(newdata);
     console.log(data);
     res.status(200).json({message:"create succesfully",newdata:newdata});
+})
+
+app.put("/user/:id",(req,res)=>{
+    const {id}=req.params;
+    console.log(id);
+    const {name}=req.body;
+    for(let i=0;i<stud.length;i++){
+        if(id==stud[i].id){
+            if(name){stud[i].name=name;}
+        }
+    }
+    res.status(200).json({message:"update successfully",stud:stud});
 })
 
 
