@@ -64,6 +64,4 @@ app.put("/user/:id",(req,res)=>{
     res.status(200).json({message:"update successfully",stud:stud});
 })
 
-
-
 app.listen(4545);
