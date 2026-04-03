@@ -4,7 +4,8 @@ const app=express();
 app.use(express.json());
 const stud=[
     {id:1,name:"krish"},
-    {id:2,name:"mohit"}
+    {id:2,name:"mohit"},
+    {id:3,name:"kartik"}
 ];
 
 app.get("/home/:id",(req,res)=>{
@@ -62,6 +63,20 @@ app.put("/user/:id",(req,res)=>{
         }
     }
     res.status(200).json({message:"update successfully",stud:stud});
+})
+
+app.delete("/user/:id",(req,res)=>{
+    const {id}=req.params;
+    console.log(stud);
+    for(let i=0;i<stud.length;i++){
+        if(id==stud[i].id){
+            stud.splice(i,1);
+            console.log(stud);
+            return res.status(200).json({message:"delete successfully",stud:stud});
+        }
+    }
+    console.log(stud);
+    return res.status(400).json({message:"user not found"});
 })
 
 app.listen(4545);
