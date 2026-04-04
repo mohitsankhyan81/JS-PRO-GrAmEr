@@ -22,7 +22,29 @@ const App = () => {
   // car.mileaga=2000
   // console.log(car);
 
-  
+  //Numeric Enums- Default
+  // enum CardinalDirection{
+  //   North,
+  //   East,
+  //   South,
+  //   West
+  // }
+
+  // let current=CardinalDirection.North
+
+  // console.log(current);
+  // current="North";
+  // console.log(current);
+
+  //String Enums
+  // enum CardinalDirections{
+  //   North='North',
+  //   East="East",
+  //   South="South",
+  //   West="West"
+  // }
+  // console.log(CardinalDirections.North);
+  // console.log(CardinalDirections.West);
   return (
     <div>
       Hello
