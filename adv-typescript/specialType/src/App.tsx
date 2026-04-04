@@ -42,18 +42,32 @@ const App = () => {
   // }
   // console.log(greet({name:"mohit",age:34}));
 
+  // interface User{
+  //   name:string,
+  //   age:number,
+  //   class:string,
+  //   message:string
+  // }
+  
+  // function userdata(user:User){
+  //   return `Name ${user.name} || age ${user.age} || class ${user.class} || message: ${user.message}`
+  // }
+
+  // console.log(userdata({name:"mohit",age:34,class:"BCA",message:"Hello students"}));
+
   interface User{
     name:string,
     age:number,
-    class:string,
-    message:string
-  }
-  
-  function userdata(user:User){
-    return `Name ${user.name} || age ${user.age} || class ${user.class} || message: ${user.message}`
+    isAvilable:true
   }
 
-  console.log(userdata({name:"mohit",age:34,class:"BCA",message:"Hello students"}));
+  function greet(user:User){
+    return `Name ${user.name} || age ${user.age} || avilable ${user.isAvilable}`
+  }
+
+  console.log(greet({name:"Mohit",age:45,isAvilable:true}))
+
+  
   return (
     <div>
       Hello
