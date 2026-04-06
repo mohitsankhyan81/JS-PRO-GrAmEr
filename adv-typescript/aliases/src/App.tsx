@@ -31,6 +31,20 @@ const App = () => {
   // }
 
   // console.log(data({name:"mohit",age:34,color:"red"}) )
+
+  interface User{
+    name:string,
+    age:number,
+    role:string,
+    id:number,
+    email:string
+  }
+
+  function UserData(user:User){
+    return `username: ${user.name} || age: ${user.age} || role: ${user.role} || userid: ${user.id} || email: ${user.email}`
+  }
+
+  console.log(UserData({name:"Mohit",age:34,role:"Admin",id:453,email:"mohit@gamil.com"}))
   return (
     <div>
       Hello
