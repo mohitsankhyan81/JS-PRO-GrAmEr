@@ -1,3 +1,5 @@
+import React, { useState } from "react"
+
 const App = () => {
   //explicit interface
   // const greeting:string="hello, Typescript"
@@ -52,10 +54,40 @@ const App = () => {
   // console.log(score);
 
   
+  interface User{
+    name:string,
+    age:number,
+    email:string
+  }
 
+  const [formdata,setformdata]=useState<User>({
+    name:"",
+    age:0,
+    email:""
+  });
+
+  const handlechange=(e:React.ChangeEvent<HTMLInputElement>)=>{
+    const {name,value}=e.target;
+
+    setformdata((prev)=>({
+      ...prev,
+      [name]:value
+    }))
+
+  }
+  const handlesubmit=(e:React.FormEvent<HTMLFormElement>)=>{
+    e.preventDefault();
+    console.log(formdata);
+  }
   return (
     <div>
       Hello
+      <form onSubmit={handlesubmit}>
+        <input type="text" name="name" placeholder="name" value={formdata.name} onChange={handlechange}/>
+        <input type="text" name="age" placeholder="age" value={formdata.age} onChange={handlechange}/>
+        <input type="text" name="email" placeholder="email" value={formdata.email} onChange={handlechange}/>
+        <button type="submit">submit</button>
+      </form>
     </div>
   )
 }
