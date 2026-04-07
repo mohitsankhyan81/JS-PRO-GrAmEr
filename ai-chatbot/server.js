@@ -1,40 +1,41 @@
-import express from "express";
-import cors from "cors";
-import dotenv from "dotenv";
-import { GoogleGenerativeAI } from "@google/generative-ai";
+// index.js
+const express = require("express");
+const dotenv = require("dotenv");
+const { GoogleGenerativeAI } = require("@google/generative-ai");
 
 dotenv.config();
 
 const app = express();
-app.use(cors());
-app.use(express.json());
+app.use(express.json()); // 🔥 important
 
+// 🔐 Gemini API init
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
-app.post("/api/ai", async (req, res) => {
-    try {
-        const { prompt } = req.body;
+// 🤖 AI Route
+app.post("/ask-ai", async (req, res) => {
+  try {
+    const { prompt } = req.body;
 
-        const model = genAI.getGenerativeModel({
-            model: "gemini-2.0-flash"
-        });
-
-        const result = await model.generateContent({
-            contents: [
-                {
-                    parts: [{ text: prompt }]
-                }
-            ]
-        });
-
-        const responseText = result.response.text();
-
-        res.json({ reply: responseText });
-
-    } catch (error) {
-        console.error(error);
-        res.status(500).json({ error: error.message });
+    if (!prompt) {
+      return res.status(400).json({ error: "Prompt is required" });
     }
+
+const model = genAI.getGenerativeModel({
+  model: "gemini-2.0-flash"
 });
 
-app.listen(3000, () => console.log("Server running on port 3000"));
+    const result = await model.generateContent(prompt);
+    const response = result.response;
+
+    res.json({ reply: response.text() });
+
+  } catch (error) {
+    console.error("AI ERROR:", error);
+    res.status(500).json({ error: "Something went wrong" });
+  }
+});
+
+// 🚀 Server start
+app.listen(3000, () => {
+  console.log("Server running on http://localhost:3000");
+});
