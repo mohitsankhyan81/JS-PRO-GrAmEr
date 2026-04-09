@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Students</title>
+</head>
+<body>
+
+<h1>Student List</h1>
+
+<ul>
+  <% studdata.forEach((stud) => { %>
+    <li>
+      Name: <%= stud.name %> |
+      Age: <%= stud.age %>
+    </li>
+  <% }) %>
+</ul>
+
+</body>
+</html>
