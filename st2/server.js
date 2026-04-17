@@ -8,6 +8,11 @@ const stud=[
     {id:3,name:"kartik"}
 ];
 
+const midd=(req,res,next)=>{
+    console.log("hello");
+    next();
+}
+
 app.get("/home/:id",(req,res)=>{
     const {id}=req.params;
     console.log(id)
@@ -20,17 +25,13 @@ app.get("/home/:id",(req,res)=>{
     }
 })
 
-app.get("/user",(req,res)=>{
+app.get("/user",midd,(req,res)=>{
     res.status(200).json({studs:stud})
     console.log(stud)
 })
 
-const middleware=(req,res,next)=>{
-    console.log("hello");
-    next();
-}
 
-app.post("/test",middleware,(req,res)=>{
+app.post("/test",(req,res)=>{
     // const newmember={
     //     id:stud.length+1,
     //     name:"robin"

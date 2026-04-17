@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>File Upload</title>
+</head>
+<body>
+
+<h2>Upload PDF Files</h2>
+
+<form action="http://localhost:3000/upload" method="POST" enctype="multipart/form-data">
+
+    <label>User ID:</label><br>
+    <input type="text" name="userId" required><br><br>
+
+    <label>Select PDF files (max 3):</label><br>
+    <input type="file" name="files" multiple required><br><br>
+
+    <button type="submit">Upload</button>
+
+</form>
+
+</body>
+</html>
