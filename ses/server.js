@@ -45,7 +45,7 @@ app.get("/",(req,res)=>{
 
 app.get("/dashboard",(req,res)=>{
     if(req.session.user){
-        res.sendFile(path.resolve("public/dashboard.html"))
+     res.sendFile(path.resolve("public/dashboard.html"))
     }
 })
 
