@@ -37,7 +37,7 @@ app.get("/register",(req,res)=>{
 })
 
 app.get("/login",(req,res)=>{
-    res.sendFile(path.resolve("public/login.html"))
+     res.sendFile(path.resolve("public/login.html"))
 })
 app.get("/",(req,res)=>{
     res.sendFile(path.resolve("public/home.html"))
